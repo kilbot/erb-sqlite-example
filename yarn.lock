@@ -3399,13 +3399,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/semver@npm:^7.3.6":
-  version: 7.3.12
-  resolution: "@types/semver@npm:7.3.12"
-  checksum: 35536b2fc5602904f21cae681f6c9498e177dab3f54ae37c92f9a1b7e43c35f18bcd81e1c98c1cf0d33ee046bb06c771e9928c1c00a401d56a03f56549252a15
-  languageName: node
-  linkType: hard
-
 "@types/serve-index@npm:^1.9.1":
   version: 1.9.1
   resolution: "@types/serve-index@npm:1.9.1"
@@ -3878,6 +3871,7 @@ __metadata:
     "@wcpos/babel-preset-expo": "*"
     "@wcpos/core": "*"
     "@wcpos/eslint-config": "*"
+    babel-loader: ^8.2.5
     browserslist-config-erb: ^0.0.3
     chalk: ^4.1.2
     concurrently: ^7.3.0
@@ -3893,7 +3887,6 @@ __metadata:
     electron-log: ^4.4.8
     electron-notarize: ^1.2.1
     electron-rebuild: ^3.2.9
-    electron-updater: ^5.2.2
     eslint: ^8.22.0
     eslint-config-airbnb-base: ^15.0.0
     eslint-config-erb: ^4.0.3
@@ -3904,6 +3897,7 @@ __metadata:
     eslint-plugin-promise: ^6.0.0
     eslint-plugin-react: ^7.30.1
     eslint-plugin-react-hooks: ^4.6.0
+    expo-modules-core: ^0.11.3
     file-loader: ^6.2.0
     history: ^5.3.0
     html-webpack-plugin: ^5.5.0
@@ -3912,8 +3906,8 @@ __metadata:
     jest: ^28.1.3
     lint-staged: ^13.0.3
     mini-css-extract-plugin: ^2.6.1
-    opencollective-postinstall: ^2.0.3
     prettier: ^2.7.1
+    process: ^0.11.10
     react: ^18.2.0
     react-dom: ^18.2.0
     react-refresh: ^0.14.0
@@ -3930,6 +3924,7 @@ __metadata:
     ts-loader: ^9.3.1
     ts-node: ^10.9.1
     typescript: ^4.7.4
+    update-electron-app: ^2.0.1
     url-loader: ^4.1.1
     webpack: ^5.74.0
     webpack-bundle-analyzer: ^4.5.0
@@ -5061,6 +5056,21 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.8.0
   checksum: 57ccd2296e1839687b5df2fd138c3d00717e0369e385254b012ccd4ee70e75f5d5c8e6cfcdf92d155015b468cfebb847b38e69bb5805d8aaf730e20575127cc6
+  languageName: node
+  linkType: hard
+
+"babel-loader@npm:^8.2.5":
+  version: 8.2.5
+  resolution: "babel-loader@npm:8.2.5"
+  dependencies:
+    find-cache-dir: ^3.3.1
+    loader-utils: ^2.0.0
+    make-dir: ^3.1.0
+    schema-utils: ^2.6.5
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    webpack: ">=2"
+  checksum: a6605557885eabbc3250412405f2c63ca87287a95a439c643fdb47d5ea3d5326f72e43ab97be070316998cb685d5dfbc70927ce1abe8be7a6a4f5919287773fb
   languageName: node
   linkType: hard
 
@@ -6317,6 +6327,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"compare-versions@npm:^3.4.0":
+  version: 3.6.0
+  resolution: "compare-versions@npm:3.6.0"
+  checksum: 7492a50cdaa2c27f5254eee7c4b38856e1c164991bab3d98d7fd067fe4b570d47123ecb92523b78338be86aa221668fd3868bfe8caa5587dc3ebbe1a03d52b5d
+  languageName: node
+  linkType: hard
+
 "component-emitter@npm:^1.2.1":
   version: 1.3.0
   resolution: "component-emitter@npm:1.3.0"
@@ -7559,6 +7576,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"electron-is-dev@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "electron-is-dev@npm:0.3.0"
+  checksum: d251e3b4c9cfd515a599dd852319ffca5b6b59c52c40dc3109f74ff9921a71e288d66445fc713a7f6296d3a696f04bb8d2135fa23599af7d7f1bc74a7552646b
+  languageName: node
+  linkType: hard
+
 "electron-is-dev@npm:^1.1.0":
   version: 1.2.0
   resolution: "electron-is-dev@npm:1.2.0"
@@ -7655,23 +7679,6 @@ __metadata:
   version: 1.4.222
   resolution: "electron-to-chromium@npm:1.4.222"
   checksum: acae758e1cfb647cfaa7ac662200e3d2c15a66c50da999cac2c08e98908e61c276c4ef336e0f9d0f42d75b68f08cdc4efe6cb7b8031cfe5aed47645ebd07632c
-  languageName: node
-  linkType: hard
-
-"electron-updater@npm:^5.2.2":
-  version: 5.2.2
-  resolution: "electron-updater@npm:5.2.2"
-  dependencies:
-    "@types/semver": ^7.3.6
-    builder-util-runtime: 9.1.0
-    fs-extra: ^10.0.0
-    js-yaml: ^4.1.0
-    lazy-val: ^1.0.5
-    lodash.escaperegexp: ^4.1.2
-    lodash.isequal: ^4.5.0
-    semver: ^7.3.5
-    typed-emitter: ^2.1.0
-  checksum: 2b07f82da81989c120eafca2207dba1c4fa63c2d8b4e2a5590639fa0962a98877e85811633d4c975a6c17e3f2f515745e9e443286cbb1b70bd7e05137243d29f
   languageName: node
   linkType: hard
 
@@ -8785,6 +8792,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expo-modules-core@npm:^0.11.3":
+  version: 0.11.3
+  resolution: "expo-modules-core@npm:0.11.3"
+  dependencies:
+    compare-versions: ^3.4.0
+    invariant: ^2.2.4
+  checksum: 7fbd9ba98d6e96877287a9f66877bcbec4859a0e4bab8e6095ce010393ae1f12728f55fbe143dc87a1f4ce95d1464d56310354bac0605f509b25bbb58d4d68fc
+  languageName: node
+  linkType: hard
+
 "expo-sqlite@npm:~10.3.0":
   version: 10.3.0
   resolution: "expo-sqlite@npm:10.3.0"
@@ -9163,6 +9180,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"find-cache-dir@npm:^3.3.1":
+  version: 3.3.2
+  resolution: "find-cache-dir@npm:3.3.2"
+  dependencies:
+    commondir: ^1.0.1
+    make-dir: ^3.0.2
+    pkg-dir: ^4.1.0
+  checksum: 1e61c2e64f5c0b1c535bd85939ae73b0e5773142713273818cc0b393ee3555fb0fd44e1a5b161b8b6c3e03e98c2fcc9c227d784850a13a90a8ab576869576817
+  languageName: node
+  linkType: hard
+
 "find-root@npm:^1.1.0":
   version: 1.1.0
   resolution: "find-root@npm:1.1.0"
@@ -9534,6 +9562,15 @@ __metadata:
   version: 1.0.0
   resolution: "getenv@npm:1.0.0"
   checksum: 19ae5cad603a1cf1bcb8fa3bed48e00d062eb0572a4404c02334b67f3b3499f238383082b064bb42515e9e25c2b08aef1a3e3d2b6852347721aa8b174825bd56
+  languageName: node
+  linkType: hard
+
+"github-url-to-object@npm:^4.0.4":
+  version: 4.0.6
+  resolution: "github-url-to-object@npm:4.0.6"
+  dependencies:
+    is-url: ^1.1.0
+  checksum: 5056c1197cd496e2246217bc2626ab0d10a8dd293c834cb5301181db86282c312dc91831e331933c0b02e75716c87b1c13d8d202dc314d0d23cca0c38f1afb6f
   languageName: node
   linkType: hard
 
@@ -10930,6 +10967,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-url@npm:^1.1.0, is-url@npm:^1.2.4":
+  version: 1.2.4
+  resolution: "is-url@npm:1.2.4"
+  checksum: 100e74b3b1feab87a43ef7653736e88d997eb7bd32e71fd3ebc413e58c1cbe56269699c776aaea84244b0567f2a7d68dfaa512a062293ed2f9fdecb394148432
+  languageName: node
+  linkType: hard
+
 "is-weakref@npm:^1.0.2":
   version: 1.0.2
   resolution: "is-weakref@npm:1.0.2"
@@ -12272,13 +12316,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.escaperegexp@npm:^4.1.2":
-  version: 4.1.2
-  resolution: "lodash.escaperegexp@npm:4.1.2"
-  checksum: 6d99452b1cfd6073175a9b741a9b09ece159eac463f86f02ea3bee2e2092923fce812c8d2bf446309cc52d1d61bf9af51c8118b0d7421388e6cead7bd3798f0f
-  languageName: node
-  linkType: hard
-
 "lodash.get@npm:^4.4.2":
   version: 4.4.2
   resolution: "lodash.get@npm:4.4.2"
@@ -12460,7 +12497,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-dir@npm:^3.0.0":
+"make-dir@npm:^3.0.0, make-dir@npm:^3.0.2, make-dir@npm:^3.1.0":
   version: 3.1.0
   resolution: "make-dir@npm:3.1.0"
   dependencies:
@@ -13809,15 +13846,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"opencollective-postinstall@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "opencollective-postinstall@npm:2.0.3"
-  bin:
-    opencollective-postinstall: index.js
-  checksum: 0a68c5cef135e46d11e665d5077398285d1ce5311c948e8327b435791c409744d4a6bb9c55bd6507fb5f2ef34b0ad920565adcdaf974cbdae701aead6f32b396
-  languageName: node
-  linkType: hard
-
 "opener@npm:^1.5.2":
   version: 1.5.2
   resolution: "opener@npm:1.5.2"
@@ -14183,7 +14211,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pkg-dir@npm:^4.2.0":
+"pkg-dir@npm:^4.1.0, pkg-dir@npm:^4.2.0":
   version: 4.2.0
   resolution: "pkg-dir@npm:4.2.0"
   dependencies:
@@ -15012,6 +15040,13 @@ __metadata:
   version: 2.0.1
   resolution: "process-nextick-args@npm:2.0.1"
   checksum: 1d38588e520dab7cea67cbbe2efdd86a10cc7a074c09657635e34f035277b59fbb57d09d8638346bf7090f8e8ebc070c96fa5fd183b777fff4f5edff5e9466cf
+  languageName: node
+  linkType: hard
+
+"process@npm:^0.11.10":
+  version: 0.11.10
+  resolution: "process@npm:0.11.10"
+  checksum: bfcce49814f7d172a6e6a14d5fa3ac92cc3d0c3b9feb1279774708a719e19acd673995226351a082a9ae99978254e320ccda4240ddc474ba31a76c79491ca7c3
   languageName: node
   linkType: hard
 
@@ -16245,7 +16280,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:*, rxjs@npm:7.5.6, rxjs@npm:^7.0.0, rxjs@npm:^7.5.5":
+"rxjs@npm:7.5.6, rxjs@npm:^7.0.0, rxjs@npm:^7.5.5":
   version: 7.5.6
   resolution: "rxjs@npm:7.5.6"
   dependencies:
@@ -16356,7 +16391,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"schema-utils@npm:^2.0.1":
+"schema-utils@npm:^2.0.1, schema-utils@npm:^2.6.5":
   version: 2.7.1
   resolution: "schema-utils@npm:2.7.1"
   dependencies:
@@ -17992,18 +18027,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typed-emitter@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "typed-emitter@npm:2.1.0"
-  dependencies:
-    rxjs: "*"
-  dependenciesMeta:
-    rxjs:
-      optional: true
-  checksum: 95821a9e05784b972cc9d152891fd12a56cb4b1a7c57e768c02bea6a8984da7aff8f19404a7b69eea11fae2a3b6c0c510a4c510f575f50162c759ae9059f2520
-  languageName: node
-  linkType: hard
-
 "typedarray-to-buffer@npm:^3.1.5":
   version: 3.1.5
   resolution: "typedarray-to-buffer@npm:3.1.5"
@@ -18197,6 +18220,20 @@ __metadata:
   bin:
     browserslist-lint: cli.js
   checksum: 7e425fe5dbbebdccf72a84ce70ec47fc74dce561d28f47bc2b84a1c2b84179a862c2261b18ab66a5e73e261c7e2ef9e11c6129112989d4d52e8f75a56bb923f8
+  languageName: node
+  linkType: hard
+
+"update-electron-app@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "update-electron-app@npm:2.0.1"
+  dependencies:
+    electron-is-dev: ^0.3.0
+    github-url-to-object: ^4.0.4
+    is-url: ^1.2.4
+    ms: ^2.1.1
+  peerDependencies:
+    electron: ">= 6.0.0"
+  checksum: 14f780087d0dbddfe915433727cb71a5c42460a9dc6ad200f1b06f1576d37303f765100d714721685459b210095606350d91a850f66d4967a53eef9d2b19631e
   languageName: node
   linkType: hard
 
