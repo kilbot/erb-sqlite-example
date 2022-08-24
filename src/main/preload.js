@@ -1,5 +1,23 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
+const sqlite = require('sqlite3');
+
+const sqlite3 = sqlite.verbose();
+
+contextBridge.exposeInMainWorld('sqlite', {
+	open: async (name) => {
+		const db = new sqlite3.Database(':memory:', (err) => {
+			if (err) {
+				console.log('Could not connect to database', err);
+			} else {
+				console.log('Connected to database!');
+			}
+		});
+
+		return db;
+	},
+});
+
 contextBridge.exposeInMainWorld('electron', {
 	ipcRenderer: {
 		myPing() {

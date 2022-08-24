@@ -20,8 +20,6 @@ import { initProtocolHandling } from './protocol';
 import { checkForUpdates } from './update';
 import { resolveHtmlPath } from './util';
 
-
-
 const sqlite3 = sqlite.verbose();
 const db = new sqlite3.Database(':memory:');
 
@@ -46,7 +44,7 @@ let mainWindow: BrowserWindow | null = null;
 ipcMain.on('ipc-example', async (event, arg) => {
 	const msgTemplate = (pingPong: string) => `IPC test: ${pingPong}`;
 	console.log(msgTemplate(arg));
-	event.reply('ipc-example', msgTemplate('pong'));
+	event.reply('ipc-example', sqlite);
 });
 
 if (process.env.NODE_ENV === 'production') {
@@ -93,6 +91,7 @@ const createWindow = async () => {
 		icon: getAssetPath('icon.png'),
 		webPreferences: {
 			preload: path.join(__dirname, 'preload.js'),
+			additionalArguments: [database],
 		},
 	});
 
@@ -141,6 +140,7 @@ app
 	.whenReady()
 	.then(() => {
 		createWindow();
+		global.database = { db, sqlite, sqlite3 };
 		app.on('activate', () => {
 			// On macOS it's common to re-create a window in the app when the
 			// dock icon is clicked and there are no other windows open.
